@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz de la Segunda Guerra Mundial: ¿quién ganó de verdad?</title>
+<meta name="description" content="15 preguntas sobre la Segunda Guerra Mundial en Europa que la mayoría falla. Pon a prueba lo que sabes sobre el Desembarco, el Préstamo y Arriendo, el frente oriental y los Aliados olvidados.">
+<link rel="canonical" href="https://nobodywonalone.com/es/quiz">
+<link rel="alternate" hreflang="en" href="https://nobodywonalone.com/quiz">
+<link rel="alternate" hreflang="fr" href="https://nobodywonalone.com/fr/quiz">
+<link rel="alternate" hreflang="es" href="https://nobodywonalone.com/es/quiz">
+<link rel="alternate" hreflang="de" href="https://nobodywonalone.com/de/quiz">
+<link rel="alternate" hreflang="pl" href="https://nobodywonalone.com/pl/quiz">
+<link rel="alternate" hreflang="ru" href="https://nobodywonalone.com/ru/quiz">
+<link rel="alternate" hreflang="x-default" href="https://nobodywonalone.com/quiz">
+<meta property="og:title" content="Quiz de la Segunda Guerra Mundial: ¿quién ganó de verdad?">
+<meta property="og:description" content="15 preguntas sobre la Segunda Guerra Mundial en Europa que la mayoría falla. Pon a prueba lo que sabes sobre el Desembarco, el Préstamo y Arriendo, el frente oriental y los Aliados olvidados.">
+<meta property="og:url" content="https://nobodywonalone.com/es/quiz">
+<meta property="og:locale" content="es_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Nobody Won <span>Alone</span></a>
+    <ul><li><a href="index.html#articles">Artículos</a></li><li><a href="timeline.html">Cronología</a></li><li><a href="myths.html">Mitos</a></li><li><a href="quiz.html" aria-current="page">Quiz</a></li><li><a href="about.html">Acerca de</a></li></ul>
+    <div class="lang-switch"><a href="../quiz.html" hreflang="en">EN</a><a href="../fr/quiz.html" hreflang="fr">FR</a><a href="quiz.html" hreflang="es" aria-current="true">ES</a><a href="../de/quiz.html" hreflang="de">DE</a><a href="../pl/quiz.html" hreflang="pl">PL</a><a href="../ru/quiz.html" hreflang="ru">RU</a></div>
+  </div>
+</nav>
+<header class="article-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Inicio</a> / Quiz</p>
+    <h1>¿Cuánto sabes <em>de verdad</em>?</h1>
+    <p class="lede">Quince preguntas sobre la guerra en Europa. La mayoría acierta menos de ocho. Cada respuesta enlaza con la historia completa.</p>
+  </div>
+</header>
+<main>
+<section><div class="wrap">
+  <div class="quiz" id="quizBox" aria-live="polite">
+    <div class="progress"><div id="qBar"></div></div>
+    <p class="tag" id="qCount"></p>
+    <p class="q" id="qText"></p>
+    <div class="opts" id="qOpts"></div>
+    <p class="explain" id="qExplain"></p>
+    <div class="quiz-foot"><span class="mono" id="qScore"></span><button class="btn" id="qNext" type="button" disabled></button></div>
+    <div id="qShare" hidden><button class="btn" id="qCopy" type="button"></button> <span class="src" id="qCopied"></span></div>
+  </div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap footer-grid">
+    <span>Nobody Won Alone · Un proyecto independiente y con fuentes sobre la victoria compartida de 1945.</span>
+    <span><a href="about.html">Acerca de</a> · <a href="myths.html">Mitos</a> · <a href="timeline.html">Cronología</a> · <a href="quiz.html">Quiz</a></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var Q = [{"q": "¿Quién declaró la guerra primero, Alemania o Estados Unidos?", "o": ["Estados Unidos, el 8 de diciembre de 1941", "Alemania, el 11 de diciembre de 1941", "Ambos el mismo día, por tratado"], "a": 1, "e": "Hitler declaró la guerra a EE. UU. el 11 de diciembre de 1941. El Pacto Tripartito no lo obligaba.", "l": "why-hitler-declared-war-on-the-us.html"}, {"q": "El Día D, ¿qué grupo desembarcó más tropas?", "o": ["Los estadounidenses", "Los británicos y canadienses", "Los franceses libres"], "a": 1, "e": "Unos 83.115 soldados británicos y canadienses, frente a unos 73.000 estadounidenses. Los estadounidenses sufrieron más muertes.", "l": "d-day-countries.html"}, {"q": "¿Qué parte de los militares alemanes muertos cayó en el frente oriental?", "o": ["Cerca de una cuarta parte", "Cerca de la mitad", "Cerca de tres cuartas partes"], "a": 2, "e": "Unos 4 millones de 5,3 millones, según el historiador Rüdiger Overmans.", "l": "eastern-front-in-numbers.html"}, {"q": "En junio de 1940, ¿qué pidió Paul Reynaud a Roosevelt?", "o": ["Solo armas", "Que EE. UU. entrara de inmediato en la guerra", "Asilo para el gobierno francés"], "a": 1, "e": "El 13 de junio pidió la entrada inmediata de EE. UU. en la guerra. Francia firmó el armisticio el 22 de junio.", "l": "june-1940-france-asked-america-for-help.html"}, {"q": "¿Qué nación extranjera tuvo más pilotos en la batalla de Inglaterra?", "o": ["Estados Unidos", "Polonia", "Canadá"], "a": 1, "e": "145 pilotos polacos, por delante de 127 neozelandeses y 112 canadienses. Hubo 9 estadounidenses.", "l": "britain-alone-1940-1941.html"}, {"q": "¿Quién descifró primero la máquina alemana Enigma?", "o": ["Los descifradores británicos de Bletchley Park", "Criptólogos polacos", "Descifradores estadounidenses"], "a": 1, "e": "Criptólogos polacos leían Enigma desde 1933 y compartieron sus métodos con el Reino Unido y Francia en julio de 1939.", "l": "forgotten-allies-ww2.html"}, {"q": "¿Qué fue la operación Bagratión?", "o": ["Una incursión británica en Noruega", "Una ofensiva soviética en Bielorrusia en el verano de 1944", "El desembarco estadounidense en el norte de África"], "a": 1, "e": "Lanzada el 22 de junio de 1944, destruyó unas 30 divisiones alemanas.", "l": "operation-bagration-vs-d-day.html"}, {"q": "¿Qué país recibió más ayuda del Préstamo y Arriendo?", "o": ["La Unión Soviética", "El Imperio británico", "China"], "a": 1, "e": "El Imperio británico recibió unos 31.400 millones de dólares; la URSS, unos 11.000 millones.", "l": "did-lend-lease-win-the-war.html"}, {"q": "¿Qué entregó el Préstamo y Arriendo al Ejército Rojo en mayor número?", "o": ["Tanques", "Camiones", "Aviones de caza"], "a": 1, "e": "427.284 camiones, que dieron al Ejército Rojo la movilidad para sus ofensivas de 1944-1945.", "l": "did-lend-lease-win-the-war.html"}, {"q": "Entre agosto de 1939 y junio de 1941, la Unión Soviética era:", "o": ["Enemiga en guerra con Alemania", "Neutral y aislada", "Socia de Alemania por un pacto de no agresión"], "a": 2, "e": "La URSS invadió Polonia, se anexionó los Estados bálticos y suministró petróleo y cereales a Alemania.", "l": "stalin-hitler-pact-1939-1941.html"}, {"q": "En mayo de 1944, ¿qué parte del ejército alemán estaba en el frente oriental?", "o": ["Cerca del 30 %", "Cerca del 62 %", "Cerca del 90 %"], "a": 1, "e": "El 62 %. El tan citado 90 % es un mito: la mayor parte de la Luftwaffe y de la marina luchaba contra los Aliados occidentales.", "l": "eastern-front-in-numbers.html"}, {"q": "¿Quién rompió el frente en el Garigliano en mayo de 1944 y abrió el camino a Roma?", "o": ["El 5.º Ejército de EE. UU. solo", "El Cuerpo Expedicionario Francés", "El 2.º Cuerpo polaco solo"], "a": 1, "e": "El cuerpo del general Juin, formado en gran parte por tropas norteafricanas, rompió el frente tras el fracaso de los asaltos estadounidenses a Cassino.", "l": "forgotten-allies-ww2.html"}, {"q": "¿Qué ejército se describe a menudo como el mayor ejército de voluntarios de la historia?", "o": ["El ejército de la India", "El ejército canadiense", "El ejército de EE. UU."], "a": 0, "e": "El ejército de la India superaba los 3,35 millones de hombres en 1945.", "l": "forgotten-allies-ww2.html"}, {"q": "En mayo de 1945, ¿qué nación consideraba la mayoría de los franceses la que más contribuyó a derrotar a Alemania?", "o": ["Estados Unidos", "El Reino Unido", "La Unión Soviética"], "a": 2, "e": "El 57 % nombró a la URSS, el 20 % a EE. UU. y el 12 % al Reino Unido (Ifop). En 2024 las respuestas se habían invertido.", "l": "index.html#memory"}, {"q": "¿Qué parte de los muertos en combate del Ejército de EE. UU. cayó en Europa y el Mediterráneo?", "o": ["Cerca de una cuarta parte", "Cerca de la mitad", "Cerca de tres cuartas partes"], "a": 2, "e": "175.445 de 225.618, alrededor del 78 %. El sacrificio estadounidense en Europa fue real y grande.", "l": "did-the-us-win-ww2.html"}], T = {"count": "Pregunta {a} de {b}", "score": "Puntos: {a}", "next": "Siguiente pregunta", "see": "Ver mi resultado", "correct": "Correcto.", "wrong": "No exactamente.", "more": "Leer más", "result": "Tu resultado", "outof": "{a} de {b}.", "r3": "Conoces la guerra mejor que casi nadie.", "r2": "Mejor que la mayoría. Aún quedan sorpresas.", "r1": "Ahora sabes por qué existe este sitio.", "again": "Volver a intentarlo", "copy": "Copiar mi resultado", "copied": "Copiado.", "share": "He sacado {a}/{b} en el quiz de Nobody Won Alone sobre la Segunda Guerra Mundial. ¿Quién ganó de verdad la guerra en Europa? nobodywonalone.com/es/quiz"};
+  var i = 0, score = 0, done = false;
+  var $ = function (id) { return document.getElementById(id); };
+  function fmt(s, a, b) { return s.replace("{a}", a).replace("{b}", b); }
+  $("qCopy").textContent = T.copy; $("qScore").textContent = fmt(T.score, 0);
+  function render() {
+    var it = Q[i];
+    $("qCount").textContent = fmt(T.count, i + 1, Q.length);
+    $("qBar").style.width = (i / Q.length * 100) + "%";
+    $("qText").textContent = it.q; $("qExplain").innerHTML = ""; $("qOpts").innerHTML = ""; $("qNext").disabled = true; $("qShare").hidden = true;
+    it.o.forEach(function (t, k) {
+      var b = document.createElement("button"); b.type = "button"; b.id = "opt-" + i + "-" + k; b.textContent = t;
+      b.addEventListener("click", function () { pick(k); }); $("qOpts").appendChild(b);
+    });
+    $("qNext").textContent = i === Q.length - 1 ? T.see : T.next;
+  }
+  function pick(k) {
+    var it = Q[i];
+    $("qOpts").querySelectorAll("button").forEach(function (b, j) { b.disabled = true; if (j === it.a) b.classList.add("right"); else if (j === k) b.classList.add("wrong"); });
+    if (k === it.a) score++;
+    $("qExplain").innerHTML = "";
+    var s = document.createElement("span"); s.textContent = (k === it.a ? T.correct : T.wrong) + " " + it.e + " ";
+    var a = document.createElement("a"); a.href = it.l; a.textContent = T.more;
+    $("qExplain").appendChild(s); $("qExplain").appendChild(a);
+    $("qScore").textContent = fmt(T.score, score); $("qNext").disabled = false;
+  }
+  $("qNext").addEventListener("click", function () {
+    if (done) { done = false; i = 0; score = 0; $("qScore").textContent = fmt(T.score, 0); render(); return; }
+    if (i < Q.length - 1) { i++; render(); return; }
+    done = true; $("qBar").style.width = "100%";
+    $("qCount").textContent = T.result;
+    $("qText").textContent = fmt(T.outof, score, Q.length) + " " + (score >= 12 ? T.r3 : score >= 8 ? T.r2 : T.r1);
+    $("qOpts").innerHTML = ""; $("qExplain").textContent = ""; $("qNext").textContent = T.again; $("qShare").hidden = false;
+  });
+  $("qCopy").addEventListener("click", function () {
+    var txt = fmt(T.share, score, Q.length);
+    try { navigator.clipboard.writeText(txt).then(function () { $("qCopied").textContent = T.copied; }, function () { $("qCopied").textContent = txt; }); }
+    catch (e) { $("qCopied").textContent = txt; }
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WW2 Quiz: Who Really Won?</title>
+<meta name="description" content="15 questions on World War II in Europe that most people get wrong. Test what you know about D-Day, Lend-Lease, the Eastern Front and the forgotten Allies.">
+<link rel="canonical" href="https://nobodywonalone.com/quiz">
+<link rel="alternate" hreflang="en" href="https://nobodywonalone.com/quiz">
+<link rel="alternate" hreflang="fr" href="https://nobodywonalone.com/fr/quiz">
+<link rel="alternate" hreflang="es" href="https://nobodywonalone.com/es/quiz">
+<link rel="alternate" hreflang="de" href="https://nobodywonalone.com/de/quiz">
+<link rel="alternate" hreflang="pl" href="https://nobodywonalone.com/pl/quiz">
+<link rel="alternate" hreflang="ru" href="https://nobodywonalone.com/ru/quiz">
+<link rel="alternate" hreflang="x-default" href="https://nobodywonalone.com/quiz">
+<meta property="og:title" content="WW2 Quiz: Who Really Won?">
+<meta property="og:description" content="15 questions on World War II in Europe that most people get wrong. Test what you know about D-Day, Lend-Lease, the Eastern Front and the forgotten Allies.">
+<meta property="og:url" content="https://nobodywonalone.com/quiz">
+<meta property="og:locale" content="en_US">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Nobody Won <span>Alone</span></a>
+    <ul><li><a href="index.html#articles">Articles</a></li><li><a href="timeline.html">Timeline</a></li><li><a href="myths.html">Myths</a></li><li><a href="quiz.html" aria-current="page">Quiz</a></li><li><a href="about.html">About</a></li></ul>
+    <div class="lang-switch"><a href="quiz.html" hreflang="en" aria-current="true">EN</a><a href="fr/quiz.html" hreflang="fr">FR</a><a href="es/quiz.html" hreflang="es">ES</a><a href="de/quiz.html" hreflang="de">DE</a><a href="pl/quiz.html" hreflang="pl">PL</a><a href="ru/quiz.html" hreflang="ru">RU</a></div>
+  </div>
+</nav>
+<header class="article-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Quiz</p>
+    <h1>How much do you <em>really</em> know?</h1>
+    <p class="lede">Fifteen questions about the war in Europe. Most people get fewer than eight right. Each answer links to the full story.</p>
+  </div>
+</header>
+<main>
+<section><div class="wrap">
+  <div class="quiz" id="quizBox" aria-live="polite">
+    <div class="progress"><div id="qBar"></div></div>
+    <p class="tag" id="qCount"></p>
+    <p class="q" id="qText"></p>
+    <div class="opts" id="qOpts"></div>
+    <p class="explain" id="qExplain"></p>
+    <div class="quiz-foot"><span class="mono" id="qScore"></span><button class="btn" id="qNext" type="button" disabled></button></div>
+    <div id="qShare" hidden><button class="btn" id="qCopy" type="button"></button> <span class="src" id="qCopied"></span></div>
+  </div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap footer-grid">
+    <span>Nobody Won Alone · An independent, sourced project on the shared victory of 1945.</span>
+    <span><a href="about.html">About</a> · <a href="myths.html">Myths</a> · <a href="timeline.html">Timeline</a> · <a href="quiz.html">Quiz</a></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var Q = [{"q": "Who declared war first between Germany and the United States?", "o": ["The United States, on December 8, 1941", "Germany, on December 11, 1941", "Both on the same day, by treaty"], "a": 1, "e": "Hitler declared war on the US on December 11, 1941. The Tripartite Pact did not require him to.", "l": "why-hitler-declared-war-on-the-us.html"}, {"q": "On D-Day, which group landed the most troops?", "o": ["Americans", "British and Canadians", "Free French"], "a": 1, "e": "About 83,115 British and Canadian troops, against about 73,000 Americans. Americans suffered the most deaths.", "l": "d-day-countries.html"}, {"q": "Roughly what share of German military deaths happened on the Eastern Front?", "o": ["About a quarter", "About half", "About three quarters"], "a": 2, "e": "About 4 million of 5.3 million, according to historian Rüdiger Overmans.", "l": "eastern-front-in-numbers.html"}, {"q": "In June 1940, what did French Prime Minister Paul Reynaud ask Roosevelt for?", "o": ["Weapons only", "For the US to enter the war immediately", "Asylum for the French government"], "a": 1, "e": "On June 13 he asked for an immediate US entry into the war. France signed an armistice on June 22.", "l": "june-1940-france-asked-america-for-help.html"}, {"q": "Which foreign nation had the most pilots in the Battle of Britain?", "o": ["United States", "Poland", "Canada"], "a": 1, "e": "145 Polish pilots, ahead of 127 New Zealanders and 112 Canadians. There were 9 Americans.", "l": "britain-alone-1940-1941.html"}, {"q": "Who first broke the German Enigma cipher?", "o": ["British codebreakers at Bletchley Park", "Polish cryptologists", "American codebreakers"], "a": 1, "e": "Polish cryptologists read Enigma from 1933 and shared their methods with Britain and France in July 1939.", "l": "forgotten-allies-ww2.html"}, {"q": "What was Operation Bagration?", "o": ["A British raid on Norway", "A Soviet offensive in Belarus in summer 1944", "The US landing in North Africa"], "a": 1, "e": "Launched on June 22, 1944, it destroyed about 30 German divisions.", "l": "operation-bagration-vs-d-day.html"}, {"q": "Which country received the most Lend-Lease aid?", "o": ["The Soviet Union", "The British Empire", "China"], "a": 1, "e": "The British Empire received about $31.4 billion, the USSR about $11 billion.", "l": "did-lend-lease-win-the-war.html"}, {"q": "What did Lend-Lease supply to the Red Army in the greatest numbers?", "o": ["Tanks", "Trucks", "Fighter planes"], "a": 1, "e": "427,284 trucks, which gave the Red Army the mobility for its 1944–45 offensives.", "l": "did-lend-lease-win-the-war.html"}, {"q": "Between August 1939 and June 1941, the Soviet Union was:", "o": ["At war with Germany", "Neutral and isolated", "Germany's partner under a non-aggression pact"], "a": 2, "e": "The USSR invaded Poland, annexed the Baltic states and supplied Germany with oil and grain.", "l": "stalin-hitler-pact-1939-1941.html"}, {"q": "In May 1944, what share of the German army was on the Eastern Front?", "o": ["About 30%", "About 62%", "About 90%"], "a": 1, "e": "62%. The often-quoted 90% is a myth: most of the Luftwaffe and navy fought the Western Allies.", "l": "eastern-front-in-numbers.html"}, {"q": "Who broke through at the Garigliano in May 1944, opening the road to Rome?", "o": ["The US Fifth Army alone", "The French Expeditionary Corps", "The Polish II Corps alone"], "a": 1, "e": "General Juin's corps, largely North African troops, broke through after US assaults on Cassino had failed.", "l": "forgotten-allies-ww2.html"}, {"q": "Which army is often described as the largest volunteer army in history?", "o": ["The Indian Army", "The Canadian Army", "The US Army"], "a": 0, "e": "The Indian Army grew to more than 3.35 million men by 1945.", "l": "forgotten-allies-ww2.html"}, {"q": "In May 1945, which nation did most French people say had contributed most to Germany's defeat?", "o": ["The United States", "The United Kingdom", "The Soviet Union"], "a": 2, "e": "57% named the USSR, 20% the US and 12% the UK (Ifop). By 2024 the answers had flipped.", "l": "index.html#memory"}, {"q": "What share of US Army combat deaths in WW2 occurred in Europe and the Mediterranean?", "o": ["About a quarter", "About half", "About three quarters"], "a": 2, "e": "175,445 of 225,618, about 78%. America's sacrifice in Europe was real and heavy.", "l": "did-the-us-win-ww2.html"}], T = {"count": "Question {a} of {b}", "score": "Score: {a}", "next": "Next question", "see": "See my score", "correct": "Correct.", "wrong": "Not quite.", "more": "Read more", "result": "Your result", "outof": "{a} out of {b}.", "r3": "You know the war better than almost anyone.", "r2": "Better than most. A few surprises left.", "r1": "Now you know why this site exists.", "again": "Try again", "copy": "Copy my score", "copied": "Copied.", "share": "I scored {a}/{b} on the Nobody Won Alone WW2 quiz. Who really won the war in Europe? nobodywonalone.com/quiz"};
+  var i = 0, score = 0, done = false;
+  var $ = function (id) { return document.getElementById(id); };
+  function fmt(s, a, b) { return s.replace("{a}", a).replace("{b}", b); }
+  $("qCopy").textContent = T.copy; $("qScore").textContent = fmt(T.score, 0);
+  function render() {
+    var it = Q[i];
+    $("qCount").textContent = fmt(T.count, i + 1, Q.length);
+    $("qBar").style.width = (i / Q.length * 100) + "%";
+    $("qText").textContent = it.q; $("qExplain").innerHTML = ""; $("qOpts").innerHTML = ""; $("qNext").disabled = true; $("qShare").hidden = true;
+    it.o.forEach(function (t, k) {
+      var b = document.createElement("button"); b.type = "button"; b.id = "opt-" + i + "-" + k; b.textContent = t;
+      b.addEventListener("click", function () { pick(k); }); $("qOpts").appendChild(b);
+    });
+    $("qNext").textContent = i === Q.length - 1 ? T.see : T.next;
+  }
+  function pick(k) {
+    var it = Q[i];
+    $("qOpts").querySelectorAll("button").forEach(function (b, j) { b.disabled = true; if (j === it.a) b.classList.add("right"); else if (j === k) b.classList.add("wrong"); });
+    if (k === it.a) score++;
+    $("qExplain").innerHTML = "";
+    var s = document.createElement("span"); s.textContent = (k === it.a ? T.correct : T.wrong) + " " + it.e + " ";
+    var a = document.createElement("a"); a.href = it.l; a.textContent = T.more;
+    $("qExplain").appendChild(s); $("qExplain").appendChild(a);
+    $("qScore").textContent = fmt(T.score, score); $("qNext").disabled = false;
+  }
+  $("qNext").addEventListener("click", function () {
+    if (done) { done = false; i = 0; score = 0; $("qScore").textContent = fmt(T.score, 0); render(); return; }
+    if (i < Q.length - 1) { i++; render(); return; }
+    done = true; $("qBar").style.width = "100%";
+    $("qCount").textContent = T.result;
+    $("qText").textContent = fmt(T.outof, score, Q.length) + " " + (score >= 12 ? T.r3 : score >= 8 ? T.r2 : T.r1);
+    $("qOpts").innerHTML = ""; $("qExplain").textContent = ""; $("qNext").textContent = T.again; $("qShare").hidden = false;
+  });
+  $("qCopy").addEventListener("click", function () {
+    var txt = fmt(T.share, score, Q.length);
+    try { navigator.clipboard.writeText(txt).then(function () { $("qCopied").textContent = T.copied; }, function () { $("qCopied").textContent = txt; }); }
+    catch (e) { $("qCopied").textContent = txt; }
+  });
+  render();
+})();
+</script>
+</body>
+</html>
