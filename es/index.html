@@ -29,7 +29,7 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=851fef4f">
+<link rel="stylesheet" href="../styles.css?v=13861d95">
 
 </head>
 <body>
@@ -54,6 +54,33 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
     </aside>
   </div>
 </header>
+
+<section id="warmap-section">
+  <div class="wrap">
+    <div class="head">
+      <div class="tag">00 / La guerra en el mapa</div>
+      <div class="prose"><h2>Seis años, un mapa</h2><p>Los grandes acontecimientos de la guerra en Europa, en orden. Pulsa reproducir o elige un punto del mapa.</p></div>
+    </div>
+    <div class="warmap" id="warmap">
+      <div class="wm-map"></div>
+      <div class="wm-side">
+        <div class="wm-card" aria-live="polite">
+          <div class="wm-meta"><span class="date wm-date"></span><span class="chip wm-chip"></span></div>
+          <h3 class="wm-title"></h3>
+          <p class="wm-text"></p>
+          <span class="tag wm-count"></span>
+        </div>
+        <div class="wm-controls">
+          <button type="button" class="chip-btn wm-prev" id="wm-prev" aria-label="Anterior">&larr;</button>
+          <button type="button" class="btn wm-play" id="wm-play" aria-pressed="false">Reproducir</button>
+          <button type="button" class="chip-btn wm-next" id="wm-next" aria-label="Siguiente">&rarr;</button>
+        </div>
+        <input type="range" class="wm-range" id="wm-range" min="0" max="25" value="0" aria-label="Seis años, un mapa">
+        <div class="legend wm-legend"><span style="color:var(--ussr)">Frente oriental</span><span style="color:var(--uk)">Frente occidental</span><span style="color:var(--us)">Estados Unidos</span><span style="color:var(--muted)">Otros Aliados</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="numbers">
   <div class="wrap">
@@ -319,6 +346,7 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
     <span>Nobody Won Alone · Un proyecto independiente y con fuentes sobre la victoria compartida de 1945.</span>
     <span><a href="about.html">Acerca de</a> · <a href="about.html#contact">Contacto</a> · <a href="myths.html">Mitos</a> · <a href="timeline.html">Cronología</a> · <a href="quiz.html">Quiz</a></span>
   </div>
-</footer>
+</footer><script>window.NWA_MAP = {"events": [{"d": "1 sep. 1939", "t": "Alemania invade Polonia", "x": "El Reino Unido y Francia declaran la guerra dos días después.", "f": "other"}, {"d": "17 sep. 1939", "t": "La URSS invade el este de Polonia", "x": "En aplicación del protocolo secreto del pacto Mólotov-Ribbentrop.", "f": "east"}, {"d": "nov. 1939", "t": "Cash and carry", "x": "EE. UU. permite vender armas a países en guerra si pagan al contado y las transportan en sus propios barcos.", "f": "us"}, {"d": "11 feb. 1940", "t": "Acuerdo comercial germano-soviético", "x": "El petróleo y los cereales soviéticos empiezan a llegar a Alemania.", "f": "east"}, {"d": "10 y 13 jun. 1940", "t": "Francia apela a Roosevelt", "x": "Reynaud pide la entrada inmediata de EE. UU. en la guerra.", "f": "us"}, {"d": "22 jun. 1940", "t": "Francia firma el armisticio", "x": "Casi 60.000 soldados franceses habían muerto en seis semanas.", "f": "west"}, {"d": "jul. - oct. 1940", "t": "Batalla de Inglaterra", "x": "La RAF, con uno de cada cinco pilotos extranjero, derrota a la Luftwaffe.", "f": "west"}, {"d": "2 sep. 1940", "t": "Destructores a cambio de bases", "x": "50 destructores estadounidenses pasan al Reino Unido a cambio de arriendos de bases.", "f": "us"}, {"d": "11 mar. 1941", "t": "El Préstamo y Arriendo se convierte en ley", "x": "EE. UU. se convierte en el arsenal de los Aliados.", "f": "us"}, {"d": "abr. - ago. 1941", "t": "Asedio de Tobruk", "x": "Hasta 14.000 australianos defienden el puerto en Libia.", "f": "other"}, {"d": "22 jun. 1941", "t": "Alemania invade la URSS", "x": "99 de las 190 divisiones alemanas atacan en el Este.", "f": "east"}, {"d": "31 oct. 1941", "t": "Hundimiento del USS Reuben James", "x": "La guerra naval no declarada en el Atlántico se cobra un destructor estadounidense.", "f": "us"}, {"d": "dic. 1941", "t": "Alemania es detenida ante Moscú", "x": "La contraofensiva soviética hace retroceder a la Wehrmacht.", "f": "east"}, {"d": "7 y 11 dic. 1941", "t": "Pearl Harbor, y después la declaración de Hitler", "x": "Alemania declara la guerra a EE. UU.; el Congreso responde ese mismo día.", "f": "us"}, {"d": "ago. 1942 - feb. 1943", "t": "Stalingrado", "x": "El 6.º Ejército alemán es cercado y destruido.", "f": "east"}, {"d": "jul. - ago. 1943", "t": "Kursk", "x": "Fracasa la última gran ofensiva alemana en el Este.", "f": "east"}, {"d": "11-12 may. 1944", "t": "Ruptura del Garigliano", "x": "Tropas coloniales francesas abren el camino a Roma.", "f": "other"}, {"d": "6 jun. 1944", "t": "El Desembarco", "x": "Fuerzas estadounidenses, británicas, canadienses y de otros Aliados desembarcan en Normandía.", "f": "west"}, {"d": "22 jun. 1944", "t": "Operación Bagratión", "x": "El Ejército Rojo destruye el Grupo de Ejércitos Centro alemán.", "f": "east"}, {"d": "1 ago. 1944", "t": "Levantamiento de Varsovia", "x": "45.000 combatientes del Ejército Nacional se alzan; el Ejército Rojo se detiene al otro lado del Vístula.", "f": "other"}, {"d": "15 ago. 1944", "t": "Desembarco de Provenza", "x": "El Ejército B francés forma la mayor parte de la fuerza; Tolón y Marsella caen antes de lo previsto.", "f": "west"}, {"d": "20 oct. 1944", "t": "Liberación de Belgrado", "x": "Por los partisanos yugoslavos y el Ejército Rojo.", "f": "other"}, {"d": "otoño de 1944", "t": "Batalla del Escalda", "x": "Los canadienses abren el puerto de Amberes.", "f": "west"}, {"d": "dic. 1944 - ene. 1945", "t": "Batalla de las Ardenas", "x": "Más de 600.000 estadounidenses en combate; 19.246 muertos.", "f": "us"}, {"d": "abr. - may. 1945", "t": "Batalla de Berlín", "x": "Tropas soviéticas y polacas toman la capital.", "f": "east"}, {"d": "8 may. 1945", "t": "Victoria en Europa", "x": "Alemania se rinde sin condiciones.", "f": "other"}], "labels": {"play": "Reproducir", "pause": "Pausa", "aria": "Mapa del mundo con los grandes acontecimientos de la Segunda Guerra Mundial en Europa, 1939-1945", "fronts": {"east": "Frente oriental", "west": "Frente occidental", "us": "Estados Unidos", "other": "Otros Aliados"}}};</script>
+<script src="../map.js?v=13861d95" defer></script>
 </body>
 </html>

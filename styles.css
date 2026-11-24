@@ -220,3 +220,34 @@ nav .wrap { gap: 14px; }
 .contact-form .btn { justify-self: start; margin-top: 12px; }
 .contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .cf-status { min-height: 1.5em; margin: 4px 0 0; font-size: 0.95rem; }
+/* World map */
+.warmap { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 0; border: 1px solid var(--rule); background: var(--sheet); }
+.wm-map { background: var(--paper); border-right: 1px solid var(--rule); min-height: 280px; }
+.wm-svg { display: block; width: 100%; height: auto; aspect-ratio: 1000 / 520; }
+.wm-sea { fill: color-mix(in srgb, var(--us) 10%, var(--paper)); }
+.wm-land { fill: color-mix(in srgb, var(--ink) 14%, var(--sheet)); }
+.wm-borders { fill: none; stroke: var(--paper); stroke-width: 0.5; vector-effect: non-scaling-stroke; }
+.wm-dot { cursor: pointer; }
+.wm-dot .wm-core { stroke: var(--paper); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wm-dot .wm-ring { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: 0; }
+.wm-east .wm-core { fill: var(--ussr); } .wm-east .wm-ring { stroke: var(--ussr); }
+.wm-west .wm-core { fill: var(--uk); } .wm-west .wm-ring { stroke: var(--uk); }
+.wm-us .wm-core { fill: var(--us); } .wm-us .wm-ring { stroke: var(--us); }
+.wm-other .wm-core { fill: var(--muted); } .wm-other .wm-ring { stroke: var(--muted); }
+.wm-dot.is-future .wm-core { opacity: 0.25; }
+.wm-dot.is-past .wm-core { opacity: 0.75; }
+.wm-dot.is-now .wm-ring { opacity: 1; animation: wmpulse 1.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+.wm-dot:focus-visible .wm-ring { opacity: 1; }
+@keyframes wmpulse { from { transform: scale(0.7); opacity: 1; } to { transform: scale(1.8); opacity: 0; } }
+.wm-side { padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.wm-card { display: flex; flex-direction: column; gap: 8px; min-height: 210px; }
+.wm-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.wm-meta .date { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+.wm-meta .chip { margin-left: 0; }
+.wm-title { font-size: 1.7rem; }
+.wm-text { margin: 0; font-size: 1rem; }
+.wm-controls { display: flex; gap: 8px; align-items: center; }
+.wm-controls .btn { flex: 1; }
+.wm-range { width: 100%; accent-color: var(--signal); }
+.wm-legend { margin-top: 0; font-size: 0.72rem; }
+@media (max-width: 860px) { .warmap { grid-template-columns: 1fr; } .wm-map { border-right: 0; border-bottom: 1px solid var(--rule); } .wm-card { min-height: 0; } }
