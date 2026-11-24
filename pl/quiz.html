@@ -17,6 +17,15 @@
 <meta property="og:description" content="15 pytań o II wojnę światową w Europie, na których większość się myli. Sprawdź, co wiesz o D-Day, Lend-Lease, froncie wschodnim i zapomnianych aliantach.">
 <meta property="og:url" content="https://nobodywonalone.com/pl/quiz">
 <meta property="og:locale" content="pl_PL">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var nwaConsent = null; try { nwaConsent = localStorage.getItem("nwa-consent"); } catch (e) {}
+gtag("consent", "default", {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: nwaConsent === "granted" ? "granted" : "denied"});
+gtag("js", new Date());
+gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHKN7GVEB"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
@@ -51,7 +60,17 @@
   </div>
 </div></section>
 </main>
-<footer>
+<div class="consent" id="nwaConsent" hidden><p>Używamy Google Analytics do liczenia odwiedzin. Bez reklam i sprzedaży danych.</p><div><button type="button" class="btn" id="nwaYes">Akceptuję</button> <button type="button" class="chip-btn" id="nwaNo">Odrzucam</button></div></div>
+<script>
+(function () {
+  var b = document.getElementById("nwaConsent"), v = null;
+  try { v = localStorage.getItem("nwa-consent"); } catch (e) {}
+  if (!v) b.hidden = false;
+  function set(x) { try { localStorage.setItem("nwa-consent", x); } catch (e) {} if (x === "granted") gtag("consent", "update", {analytics_storage: "granted"}); b.hidden = true; }
+  document.getElementById("nwaYes").addEventListener("click", function () { set("granted"); });
+  document.getElementById("nwaNo").addEventListener("click", function () { set("denied"); });
+})();
+</script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · Niezależny projekt oparty na źródłach o wspólnym zwycięstwie z 1945 roku.</span>
     <span><a href="about.html">O nas</a> · <a href="myths.html">Mity</a> · <a href="timeline.html">Kalendarium</a> · <a href="quiz.html">Quiz</a></span>

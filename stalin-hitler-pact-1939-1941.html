@@ -17,6 +17,15 @@
 <meta property="og:description" content="From August 1939 to June 1941, the Soviet Union was Nazi Germany's partner. The secret protocol, the invasion of Poland, Katyn and the oil and grain sent to Germany.">
 <meta property="og:url" content="https://nobodywonalone.com/stalin-hitler-pact-1939-1941">
 <meta property="og:locale" content="en_US">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var nwaConsent = null; try { nwaConsent = localStorage.getItem("nwa-consent"); } catch (e) {}
+gtag("consent", "default", {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: nwaConsent === "granted" ? "granted" : "denied"});
+gtag("js", new Date());
+gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHKN7GVEB"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
@@ -75,7 +84,17 @@
     <div class="related"><a href="did-the-us-win-ww2.html"><span class="tag">Read next</span><h3>Did the US win WW2?</h3><span>The short answer, the long answer, and the numbers behind both.</span></a><a href="why-hitler-declared-war-on-the-us.html"><span class="tag">Read next</span><h3>Why did Hitler declare war on the US?</h3><span>December 11, 1941: the decision that brought America into the war in Europe.</span></a><a href="june-1940-france-asked-america-for-help.html"><span class="tag">Read next</span><h3>June 1940: France asked America for help</h3><span>Reynaud's appeals to Roosevelt, and the answer that never came.</span></a><a href="britain-alone-1940-1941.html"><span class="tag">Read next</span><h3>Britain alone, 1940–1941</h3><span>The year the British Empire was the only power fighting Hitler.</span></a><a href="eastern-front-in-numbers.html"><span class="tag">Read next</span><h3>The Eastern Front in numbers</h3><span>Moscow, Stalingrad, Kursk, Berlin: where Germany lost its army.</span></a><a href="operation-bagration-vs-d-day.html"><span class="tag">Read next</span><h3>Bagration vs D-Day</h3><span>The Soviet offensive of summer 1944 that dwarfed Normandy.</span></a><a href="d-day-countries.html"><span class="tag">Read next</span><h3>D-Day: which countries took part?</h3><span>Beaches, troops, ships and losses, nation by nation.</span></a><a href="did-lend-lease-win-the-war.html"><span class="tag">Read next</span><h3>Did Lend-Lease win the war?</h3><span>Trucks, fuel and food: what American aid really did for the Allies.</span></a><a href="forgotten-allies-ww2.html"><span class="tag">Read next</span><h3>The forgotten Allies</h3><span>Poland, France, India, Canada, Yugoslavia and the others.</span></a></div>
   </div>
 </section>
-<footer>
+<div class="consent" id="nwaConsent" hidden><p>We use Google Analytics to count visits. No ads, no data sold.</p><div><button type="button" class="btn" id="nwaYes">Accept</button> <button type="button" class="chip-btn" id="nwaNo">Decline</button></div></div>
+<script>
+(function () {
+  var b = document.getElementById("nwaConsent"), v = null;
+  try { v = localStorage.getItem("nwa-consent"); } catch (e) {}
+  if (!v) b.hidden = false;
+  function set(x) { try { localStorage.setItem("nwa-consent", x); } catch (e) {} if (x === "granted") gtag("consent", "update", {analytics_storage: "granted"}); b.hidden = true; }
+  document.getElementById("nwaYes").addEventListener("click", function () { set("granted"); });
+  document.getElementById("nwaNo").addEventListener("click", function () { set("denied"); });
+})();
+</script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · An independent, sourced project on the shared victory of 1945.</span>
     <span><a href="about.html">About</a> · <a href="myths.html">Myths</a> · <a href="timeline.html">Timeline</a> · <a href="quiz.html">Quiz</a></span>

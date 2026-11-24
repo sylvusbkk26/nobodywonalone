@@ -17,6 +17,15 @@
 <meta property="og:description" content="Im Juni 1940 flehte der französische Ministerpräsident Paul Reynaud Roosevelt an, in den Krieg einzutreten. Worum Frankreich bat, was Amerika antwortete, und warum.">
 <meta property="og:url" content="https://nobodywonalone.com/de/june-1940-france-asked-america-for-help">
 <meta property="og:locale" content="de_DE">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var nwaConsent = null; try { nwaConsent = localStorage.getItem("nwa-consent"); } catch (e) {}
+gtag("consent", "default", {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: nwaConsent === "granted" ? "granted" : "denied"});
+gtag("js", new Date());
+gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHKN7GVEB"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
@@ -76,7 +85,17 @@
     <div class="related"><a href="did-the-us-win-ww2.html"><span class="tag">Als Nächstes</span><h3>Haben die USA den Krieg gewonnen?</h3><span>Die kurze Antwort, die lange Antwort und die Zahlen hinter beiden.</span></a><a href="why-hitler-declared-war-on-the-us.html"><span class="tag">Als Nächstes</span><h3>Warum erklärte Hitler den USA den Krieg?</h3><span>11. Dezember 1941: die Entscheidung, die Amerika in den Krieg in Europa brachte.</span></a><a href="britain-alone-1940-1941.html"><span class="tag">Als Nächstes</span><h3>Großbritannien allein, 1940–1941</h3><span>Das Jahr, in dem das Britische Empire als einzige Macht gegen Hitler kämpfte.</span></a><a href="eastern-front-in-numbers.html"><span class="tag">Als Nächstes</span><h3>Die Ostfront in Zahlen</h3><span>Moskau, Stalingrad, Kursk, Berlin: wo Deutschland sein Heer verlor.</span></a><a href="operation-bagration-vs-d-day.html"><span class="tag">Als Nächstes</span><h3>Bagration und D-Day</h3><span>Die sowjetische Sommeroffensive 1944, die die Normandie in den Schatten stellte.</span></a><a href="d-day-countries.html"><span class="tag">Als Nächstes</span><h3>D-Day: Welche Länder nahmen teil?</h3><span>Strände, Truppen, Schiffe und Verluste, Nation für Nation.</span></a><a href="did-lend-lease-win-the-war.html"><span class="tag">Als Nächstes</span><h3>Hat Lend-Lease den Krieg gewonnen?</h3><span>Lastwagen, Treibstoff und Lebensmittel: was die amerikanische Hilfe wirklich bewirkte.</span></a><a href="forgotten-allies-ww2.html"><span class="tag">Als Nächstes</span><h3>Die vergessenen Alliierten</h3><span>Polen, Frankreich, Indien, Kanada, Jugoslawien und die anderen.</span></a><a href="stalin-hitler-pact-1939-1941.html"><span class="tag">Als Nächstes</span><h3>1939–1941: Stalins Pakt mit Hitler</h3><span>Der Teil der sowjetischen Geschichte, den Moskau verschweigt.</span></a></div>
   </div>
 </section>
-<footer>
+<div class="consent" id="nwaConsent" hidden><p>Wir nutzen Google Analytics, um Besuche zu zählen. Keine Werbung, kein Datenverkauf.</p><div><button type="button" class="btn" id="nwaYes">Akzeptieren</button> <button type="button" class="chip-btn" id="nwaNo">Ablehnen</button></div></div>
+<script>
+(function () {
+  var b = document.getElementById("nwaConsent"), v = null;
+  try { v = localStorage.getItem("nwa-consent"); } catch (e) {}
+  if (!v) b.hidden = false;
+  function set(x) { try { localStorage.setItem("nwa-consent", x); } catch (e) {} if (x === "granted") gtag("consent", "update", {analytics_storage: "granted"}); b.hidden = true; }
+  document.getElementById("nwaYes").addEventListener("click", function () { set("granted"); });
+  document.getElementById("nwaNo").addEventListener("click", function () { set("denied"); });
+})();
+</script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · Ein unabhängiges, belegtes Projekt über den gemeinsamen Sieg von 1945.</span>
     <span><a href="about.html">Über uns</a> · <a href="myths.html">Mythen</a> · <a href="timeline.html">Chronik</a> · <a href="quiz.html">Quiz</a></span>

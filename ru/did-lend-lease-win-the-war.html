@@ -17,6 +17,15 @@
 <meta property="og:description" content="Выиграла ли Вторую мировую войну американская помощь по ленд-лизу? 50,1 млрд долларов, 427 тысяч грузовиков для Красной армии и то, что советские руководители признавали в частных разговорах.">
 <meta property="og:url" content="https://nobodywonalone.com/ru/did-lend-lease-win-the-war">
 <meta property="og:locale" content="ru_RU">
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var nwaConsent = null; try { nwaConsent = localStorage.getItem("nwa-consent"); } catch (e) {}
+gtag("consent", "default", {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: nwaConsent === "granted" ? "granted" : "denied"});
+gtag("js", new Date());
+gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QHKN7GVEB"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&subset=latin,latin-ext,cyrillic&display=swap" rel="stylesheet">
@@ -77,7 +86,17 @@
     <div class="related"><a href="did-the-us-win-ww2.html"><span class="tag">Читать далее</span><h3>США выиграли войну?</h3><span>Короткий ответ, длинный ответ и цифры за ними.</span></a><a href="why-hitler-declared-war-on-the-us.html"><span class="tag">Читать далее</span><h3>Почему Гитлер объявил войну США?</h3><span>11 декабря 1941 года: решение, которое привело Америку в войну в Европе.</span></a><a href="june-1940-france-asked-america-for-help.html"><span class="tag">Читать далее</span><h3>Июнь 1940-го: Франция просила о помощи</h3><span>Обращения Рейно к Рузвельту и ответ, который так и не пришёл.</span></a><a href="britain-alone-1940-1941.html"><span class="tag">Читать далее</span><h3>Великобритания в одиночку, 1940–1941</h3><span>Год, когда Британская империя была единственной державой, воевавшей с Гитлером.</span></a><a href="eastern-front-in-numbers.html"><span class="tag">Читать далее</span><h3>Восточный фронт в цифрах</h3><span>Москва, Сталинград, Курск, Берлин: где Германия потеряла свою армию.</span></a><a href="operation-bagration-vs-d-day.html"><span class="tag">Читать далее</span><h3>«Багратион» и Нормандия</h3><span>Советское наступление лета 1944 года, затмившее Нормандию.</span></a><a href="d-day-countries.html"><span class="tag">Читать далее</span><h3>Высадка в Нормандии: какие страны?</h3><span>Пляжи, войска, корабли и потери по странам.</span></a><a href="forgotten-allies-ww2.html"><span class="tag">Читать далее</span><h3>Забытые союзники</h3><span>Польша, Франция, Индия, Канада, Югославия и другие.</span></a><a href="stalin-hitler-pact-1939-1941.html"><span class="tag">Читать далее</span><h3>1939–1941: пакт Сталина с Гитлером</h3><span>Часть советской истории, о которой Москва умалчивает.</span></a></div>
   </div>
 </section>
-<footer>
+<div class="consent" id="nwaConsent" hidden><p>Мы используем Google Analytics для подсчёта посещений. Без рекламы и продажи данных.</p><div><button type="button" class="btn" id="nwaYes">Принять</button> <button type="button" class="chip-btn" id="nwaNo">Отклонить</button></div></div>
+<script>
+(function () {
+  var b = document.getElementById("nwaConsent"), v = null;
+  try { v = localStorage.getItem("nwa-consent"); } catch (e) {}
+  if (!v) b.hidden = false;
+  function set(x) { try { localStorage.setItem("nwa-consent", x); } catch (e) {} if (x === "granted") gtag("consent", "update", {analytics_storage: "granted"}); b.hidden = true; }
+  document.getElementById("nwaYes").addEventListener("click", function () { set("granted"); });
+  document.getElementById("nwaNo").addEventListener("click", function () { set("denied"); });
+})();
+</script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · Независимый проект с источниками о совместной победе 1945 года.</span>
     <span><a href="about.html">О проекте</a> · <a href="myths.html">Мифы</a> · <a href="timeline.html">Хроника</a> · <a href="quiz.html">Тест</a></span>
