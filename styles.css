@@ -222,7 +222,7 @@ nav .wrap { gap: 14px; }
 .cf-status { min-height: 1.5em; margin: 4px 0 0; font-size: 0.95rem; }
 /* World map */
 .warmap { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 0; border: 1px solid var(--rule); background: var(--sheet); }
-.wm-map { background: var(--paper); border-right: 1px solid var(--rule); min-height: 280px; }
+.wm-map { background: color-mix(in srgb, var(--us) 10%, var(--paper)); border-right: 1px solid var(--rule); min-height: 280px; display: flex; align-items: center; }
 .wm-svg { display: block; width: 100%; height: auto; aspect-ratio: 1000 / 520; }
 .wm-sea { fill: color-mix(in srgb, var(--us) 10%, var(--paper)); }
 .wm-land { fill: color-mix(in srgb, var(--ink) 14%, var(--sheet)); }
@@ -250,7 +250,7 @@ nav .wrap { gap: 14px; }
 .wm-controls .btn { flex: 1; }
 .wm-range { width: 100%; accent-color: var(--signal); }
 .wm-legend { margin-top: 0; font-size: 0.72rem; }
-@media (max-width: 860px) { .warmap { grid-template-columns: 1fr; } .wm-map { border-right: 0; border-bottom: 1px solid var(--rule); } .wm-card { min-height: 0; } }
+@media (max-width: 860px) { .warmap { grid-template-columns: 1fr; } .wm-map { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 0; } .wm-card { min-height: 0; } }
 /* Thai */
 html[lang="th"] { --display: "IBM Plex Sans Thai", "Big Shoulders Display", sans-serif; --body: "Noto Serif Thai", "Newsreader", serif; }
 html[lang="th"] h1, html[lang="th"] h2, html[lang="th"] h3, html[lang="th"] .timeline strong, html[lang="th"] .myth .claim, html[lang="th"] .brand { line-height: 1.3; font-weight: 700; letter-spacing: 0; }
