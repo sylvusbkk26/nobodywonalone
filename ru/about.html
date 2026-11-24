@@ -52,7 +52,7 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
   <p>Многие американцы вырастают с убеждением, что США выиграли Вторую мировую войну в Европе более или менее в одиночку. Это видно по опросам: в 2024 году 59% американцев считали, что больше всех для победы над нацистами сделали США. Этот сайт рассказывает более широкую историю, в которой американская промышленность и мужество имеют огромное значение — наряду с Красной армией, Британской империей и бойцами оккупированной Европы.</p>
   <p>Он не антиамериканский и не пророссийский. Он поправляет мифы всех сторон, включая советские, и отдаёт американскому вкладу должное в полной мере.</p>
   <h2>Кто за ним стоит</h2>
-  <p>Nobody Won Alone — независимый проект без политического или институционального финансирования. <span class="todo">[Добавьте здесь краткую биографию автора.]</span></p>
+  <p>Nobody Won Alone — независимый проект без политического или институционального финансирования. Его автор — Сильвен Моро.</p>
   <h2>Как мы проверяем факты</h2>
   <ul>
     <li><strong>У каждой цифры есть источник.</strong> Каждая статья перечисляет свои источники; мы отдаём предпочтение первоисточникам, официальным историям и признанным историкам.</li>
@@ -61,7 +61,17 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
     <li><strong>Мы показываем другую сторону.</strong> Каждая статья заканчивается «честной версией» с самым сильным контраргументом.</li>
   </ul>
   <h2>Исправления</h2>
-  <p>Нашли ошибку? Мы исправляем открыто и отмечаем изменение на странице. <span class="todo">[Добавьте здесь контактный адрес.]</span></p></div></section>
+  <p>Нашли ошибку? Мы исправляем открыто и отмечаем изменение на странице. <a href="#contact">Воспользуйтесь формой обратной связи ниже.</a></p>
+  <h2 id="contact">Контакты</h2>
+  <p>Есть вопрос, исправление или источник? Напишите нам.</p>
+  <form class="contact-form" id="contactForm" novalidate>
+    <label for="cf-name">Имя</label><input id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+    <label for="cf-email">Эл. почта</label><input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+    <label for="cf-msg">Сообщение</label><textarea id="cf-msg" name="message" rows="7" maxlength="5000" required></textarea>
+    <div class="hp" aria-hidden="true"><label for="cf-web">Website</label><input id="cf-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" type="submit" id="cf-send">Отправить</button>
+    <p class="cf-status" id="cf-status" role="status"></p>
+  </form></div></section>
 </main>
 <div class="consent" id="nwaConsent" hidden><p>Мы используем Google Analytics для подсчёта посещений. Без рекламы и продажи данных.</p><div><button type="button" class="btn" id="nwaYes">Принять</button> <button type="button" class="chip-btn" id="nwaNo">Отклонить</button></div></div>
 <script>
@@ -76,9 +86,24 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
 </script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · Независимый проект с источниками о совместной победе 1945 года.</span>
-    <span><a href="about.html">О проекте</a> · <a href="myths.html">Мифы</a> · <a href="timeline.html">Хроника</a> · <a href="quiz.html">Тест</a></span>
+    <span><a href="about.html">О проекте</a> · <a href="about.html#contact">Контакты</a> · <a href="myths.html">Мифы</a> · <a href="timeline.html">Хроника</a> · <a href="quiz.html">Тест</a></span>
   </div>
 </footer>
-
+<script>
+(function () {
+  var T = {"send": "Отправить", "sending": "Отправка…", "ok": "Спасибо. Ваше сообщение отправлено.", "err": "Не удалось отправить сообщение. Попробуйте позже.", "bad": "Укажите имя, корректный адрес почты и сообщение."}, f = document.getElementById("contactForm"), st = document.getElementById("cf-status"), btn = document.getElementById("cf-send"), t0 = Date.now();
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = { name: f.name.value.trim(), email: f.email.value.trim(), message: f.message.value.trim(), website: f.website.value, elapsed: Date.now() - t0, lang: document.documentElement.lang, page: location.pathname };
+    if (!d.name || !d.message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) { st.textContent = T.bad; return; }
+    btn.disabled = true; btn.textContent = T.sending; st.textContent = "";
+    fetch("/api/contact", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(d) })
+      .then(function (r) { return r.json(); })
+      .then(function (r) { if (r.ok) { f.reset(); st.textContent = T.ok; } else { st.textContent = r.error === "fields" ? T.bad : T.err; } })
+      .catch(function () { st.textContent = T.err; })
+      .then(function () { btn.disabled = false; btn.textContent = T.send; });
+  });
+})();
+</script>
 </body>
 </html>

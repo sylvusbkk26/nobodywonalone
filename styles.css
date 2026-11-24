@@ -213,3 +213,10 @@ nav .wrap { gap: 14px; }
 .consent { position: fixed; left: 16px; right: 16px; bottom: 16px; max-width: 560px; margin: 0 auto; background: var(--sheet); border: 2px solid var(--ink); padding: 16px 18px; z-index: 20; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
 .consent[hidden] { display: none; }
 .consent p { margin: 0; font-size: 0.95rem; flex: 1 1 260px; }
+.contact-form { display: grid; gap: 8px; max-width: 560px; margin-top: 12px; }
+.contact-form label { font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-top: 8px; }
+.contact-form input, .contact-form textarea { font: inherit; font-size: 1rem; padding: 10px 12px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--signal); outline-offset: 1px; border-color: var(--ink); }
+.contact-form .btn { justify-self: start; margin-top: 12px; }
+.contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.cf-status { min-height: 1.5em; margin: 4px 0 0; font-size: 0.95rem; }

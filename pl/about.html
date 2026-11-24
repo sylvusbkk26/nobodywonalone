@@ -52,7 +52,7 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
   <p>Wielu Amerykanów dorasta w przekonaniu, że USA wygrały II wojnę światową w Europie mniej więcej same. Pokazują to sondaże: w 2024 roku 59% Amerykanów uważało, że to USA najbardziej przyczyniły się do pokonania nazistów. Ta strona opowiada szerszą historię, w której amerykański przemysł i odwaga mają ogromne znaczenie, obok Armii Czerwonej, Imperium Brytyjskiego i bojowników okupowanej Europy.</p>
   <p>Nie jest antyamerykańska ani prorosyjska. Koryguje mity z każdej strony, także radzieckie, i oddaje amerykańskiemu wkładowi pełną wagę.</p>
   <h2>Kto za nią stoi</h2>
-  <p>Nobody Won Alone to niezależny projekt, bez finansowania politycznego ani instytucjonalnego. <span class="todo">[Tu dodaj krótką biografię autora.]</span></p>
+  <p>Nobody Won Alone to niezależny projekt, bez finansowania politycznego ani instytucjonalnego. Jego autorem jest Sylvain Moreau.</p>
   <h2>Jak sprawdzamy fakty</h2>
   <ul>
     <li><strong>Każda liczba ma źródło.</strong> Każdy artykuł podaje swoje źródła; preferujemy dokumenty źródłowe, oficjalne opracowania i uznanych historyków.</li>
@@ -61,7 +61,17 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
     <li><strong>Pokazujemy drugą stronę.</strong> Każdy artykuł kończy się „uczciwą wersją”, która przedstawia najmocniejszy kontrargument.</li>
   </ul>
   <h2>Sprostowania</h2>
-  <p>Znalazłeś błąd? Poprawiamy otwarcie i zaznaczamy zmianę na stronie. <span class="todo">[Tu dodaj adres kontaktowy.]</span></p></div></section>
+  <p>Znalazłeś błąd? Poprawiamy otwarcie i zaznaczamy zmianę na stronie. <a href="#contact">Skorzystaj z formularza kontaktowego poniżej.</a></p>
+  <h2 id="contact">Kontakt</h2>
+  <p>Masz pytanie, poprawkę lub źródło do zaproponowania? Napisz do nas.</p>
+  <form class="contact-form" id="contactForm" novalidate>
+    <label for="cf-name">Imię i nazwisko</label><input id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+    <label for="cf-email">E-mail</label><input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+    <label for="cf-msg">Wiadomość</label><textarea id="cf-msg" name="message" rows="7" maxlength="5000" required></textarea>
+    <div class="hp" aria-hidden="true"><label for="cf-web">Website</label><input id="cf-web" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" type="submit" id="cf-send">Wyślij</button>
+    <p class="cf-status" id="cf-status" role="status"></p>
+  </form></div></section>
 </main>
 <div class="consent" id="nwaConsent" hidden><p>Używamy Google Analytics do liczenia odwiedzin. Bez reklam i sprzedaży danych.</p><div><button type="button" class="btn" id="nwaYes">Akceptuję</button> <button type="button" class="chip-btn" id="nwaNo">Odrzucam</button></div></div>
 <script>
@@ -76,9 +86,24 @@ gtag("config", "G-3QHKN7GVEB", {anonymize_ip: true});
 </script><footer>
   <div class="wrap footer-grid">
     <span>Nobody Won Alone · Niezależny projekt oparty na źródłach o wspólnym zwycięstwie z 1945 roku.</span>
-    <span><a href="about.html">O nas</a> · <a href="myths.html">Mity</a> · <a href="timeline.html">Kalendarium</a> · <a href="quiz.html">Quiz</a></span>
+    <span><a href="about.html">O nas</a> · <a href="about.html#contact">Kontakt</a> · <a href="myths.html">Mity</a> · <a href="timeline.html">Kalendarium</a> · <a href="quiz.html">Quiz</a></span>
   </div>
 </footer>
-
+<script>
+(function () {
+  var T = {"send": "Wyślij", "sending": "Wysyłanie…", "ok": "Dziękujemy. Twoja wiadomość została wysłana.", "err": "Nie udało się wysłać wiadomości. Spróbuj ponownie później.", "bad": "Podaj imię, poprawny adres e-mail i wiadomość."}, f = document.getElementById("contactForm"), st = document.getElementById("cf-status"), btn = document.getElementById("cf-send"), t0 = Date.now();
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = { name: f.name.value.trim(), email: f.email.value.trim(), message: f.message.value.trim(), website: f.website.value, elapsed: Date.now() - t0, lang: document.documentElement.lang, page: location.pathname };
+    if (!d.name || !d.message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) { st.textContent = T.bad; return; }
+    btn.disabled = true; btn.textContent = T.sending; st.textContent = "";
+    fetch("/api/contact", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(d) })
+      .then(function (r) { return r.json(); })
+      .then(function (r) { if (r.ok) { f.reset(); st.textContent = T.ok; } else { st.textContent = r.error === "fields" ? T.bad : T.err; } })
+      .catch(function () { st.textContent = T.err; })
+      .then(function () { btn.disabled = false; btn.textContent = T.send; });
+  });
+})();
+</script>
 </body>
 </html>
