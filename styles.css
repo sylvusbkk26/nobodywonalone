@@ -257,3 +257,7 @@ html[lang="th"] h1, html[lang="th"] h2, html[lang="th"] h3, html[lang="th"] .tim
 html[lang="th"] .hero h1 { font-size: clamp(2.6rem, 8vw, 5.6rem); }
 html[lang="th"] .article-hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); }
 html[lang="th"] body { line-height: 1.75; }
+/* skip link */
+.skip { position: absolute; left: 8px; top: -60px; z-index: 100; background: var(--ink); color: var(--paper); padding: 10px 14px; font-family: var(--mono); text-decoration: none; }
+.skip:focus { top: 8px; }
+#main:focus { outline: none; }
